@@ -8,10 +8,10 @@ import xml.dom.minidom
 X_TRANSLATE = (23.233, 78.333334, 133.433)
 Y_TRANSLATE = (26.110997, 108.21131, 190.311)
 
-CARD_TEMPLATE_FILE = "55x82.svg"
-DATABASE_FILE = "gagnasafn.csv"
-IMAGE_DIR = "/myndir"
-PRINTABLES_DIR = "/printables"
+CARD_TEMPLATE_FILE = str(os.getcwd()) + "/sniðmát/55x82.svg"
+DATABASE_FILE = str(os.getcwd()) + "/gagnasafn.csv"
+IMAGE_DIR = str(os.getcwd()) + "/myndir"
+PRINTABLES_DIR = str(os.getcwd()) + "/printables"
 A4_TEMPLATE = """
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
