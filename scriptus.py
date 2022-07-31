@@ -8,8 +8,8 @@ import xml.dom.minidom
 #X_TRANSLATE = (23.233, 78.333334, 133.433)
 #Y_TRANSLATE = (26.110997, 108.21131, 190.311)
 
-X_TRANSLATE = (22.066, 78.371, 134.630)
-Y_TRANSLATE = (19.103, 106.344 , 193.563)
+X_TRANSLATE = (22.104, 78.237, 134.380)
+Y_TRANSLATE = (19.117, 106.277 , 193.429)
 
 CARD_TEMPLATE_FILE = str(os.getcwd()) + "/sniðmát/56x87.svg"
 DATABASE_FILE = str(os.getcwd()) + "/gagnasafn.csv"
