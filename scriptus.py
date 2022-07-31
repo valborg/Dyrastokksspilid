@@ -5,10 +5,13 @@ import csv
 import xml.dom.minidom
 
 
-X_TRANSLATE = (23.233, 78.333334, 133.433)
-Y_TRANSLATE = (26.110997, 108.21131, 190.311)
+#X_TRANSLATE = (23.233, 78.333334, 133.433)
+#Y_TRANSLATE = (26.110997, 108.21131, 190.311)
 
-CARD_TEMPLATE_FILE = str(os.getcwd()) + "/sniðmát/55x82.svg"
+X_TRANSLATE = (22.066, 78.371, 134.630)
+Y_TRANSLATE = (19.103, 106.344 , 193.563)
+
+CARD_TEMPLATE_FILE = str(os.getcwd()) + "/sniðmát/56x87.svg"
 DATABASE_FILE = str(os.getcwd()) + "/gagnasafn.csv"
 IMAGE_DIR = str(os.getcwd()) + "/myndir"
 PRINTABLES_DIR = str(os.getcwd()) + "/printables"
@@ -56,6 +59,7 @@ def get_image_url(number):
 
 def fill_template(template, row):
     number = int(row["Númer Dýrs"])
+    output = template
     if row["Afkvæmi avg"] != "":
         offsprings = row["Afkvæmi avg"]
     else:
@@ -78,9 +82,16 @@ def fill_template(template, row):
 
     scientific_name_length = str(len(row["Fræðiheiti"].strip().replace(" ", "")))
 
-    output = template
+    if len(row['Nafn Dýrs']) > 32 and "-" in row['Nafn Dýrs']:
+    	hyphen_name = row['Nafn Dýrs']
+    	output = output.replace("#NAME", hyphen_name[0:hyphen_name.index("-")+1])
+    	output = output.replace("#LONGER_NAME", hyphen_name[hyphen_name.index("-")+1:])
+    else:	
+    	output = output.replace("#NAME", row["Nafn Dýrs"])
+    	output = output.replace("#LONGER_NAME", "")
+
+
     output = output.replace("#CARD_NUMBER", str(number))
-    output = output.replace("#NAME", row["Nafn Dýrs"])
     output = output.replace("#SCIENTIFIC_NAME_LENGTH", scientific_name_length)
     output = output.replace("#SCIENTIFIC_NAME", row["Fræðiheiti"])
     output = output.replace("#OFFSPRINGS", offsprings)
