@@ -1,4 +1,4 @@
-# statimals-deck-game
+# Dýrastokksspilið
 A deck of animal species with statistics, playable with a number of ways. Similar to toptrumps.
 
 Dýraspilastokkur með tölfræðiupplýsingum um dýrategundir sem má spila eins og lönguvitleysu eða á ótal aðra vegu.
