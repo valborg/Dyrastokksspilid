@@ -82,13 +82,14 @@ def fill_template(template, row):
 
     scientific_name_length = str(len(row["Fræðiheiti"].strip().replace(" ", "")))
 
-    if len(row['Nafn Dýrs']) > 32 and "-" in row['Nafn Dýrs']:
-    	hyphen_name = row['Nafn Dýrs']
-    	output = output.replace("#NAME", hyphen_name[0:hyphen_name.index("-")+1])
-    	output = output.replace("#LONGER_NAME", hyphen_name[hyphen_name.index("-")+1:])
-    else:	
-    	output = output.replace("#NAME", row["Nafn Dýrs"])
-    	output = output.replace("#LONGER_NAME", "")
+    if (len(row['Nafn Dýrs']) > 32 and "-" in row['Nafn Dýrs']): 
+     hyphen_name = row['Nafn Dýrs']
+     output = output.replace("#NAME", hyphen_name[0:hyphen_name.index("-")+1])
+     output = output.replace("#LONGER_NAME", hyphen_name[hyphen_name.index("-")+1:])
+    
+    else:
+     output = output.replace("#NAME", row["Nafn Dýrs"])
+     output = output.replace("#LONGER_NAME", "")	
 
 
     output = output.replace("#CARD_NUMBER", str(number))
