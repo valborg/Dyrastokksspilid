@@ -1,35 +1,124 @@
 <!DOCTYPE html>
 <html>
-    <head>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
 
-        <title>Dýrastokksspilið</title>
-        <style></style>
-        <script>
-          const skilyrdi = [
-            "Flottasta dýrið",
-            "Svalasta dýrið",
-            "Grimmasta dýrið",
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Dýrastokksspilið</title>
+    <style></style>
+    <script async
+        src="//www.instagram.com/embed.js"></script>
+    <script>
+        const furduSkilyrdi = [
             "Dýrið sem er líklegast til að vera í sirkús",
             "Dýrið sem er líklegast til að vera gæludýr",
             "Dýrið sem er líklegast til að vera í sundlaug",
-            "Hættulegasta dýrið",
             "Dýrið sem er líklegast til að vera forseti",
             "Dýrið sem er líklegast til að borða mús",
             "Dýrið sem er líklegast til að búa á Íslandi",
             "Dýrið sem er líklegast til að lukkudýr fyrir sundlaugagarð",
             "Dýrið sem er líklegast til að lukkudýr fyrir klukkufyrirtæki",
-            "Ljótasta dýrið",
-            "Dýrið með stærstu tennurnar",
             "Dýrið sem er líklegast til að tala mikið í síma",
-            "Dýrið með stærstu augun",
-            "Dýrið með minnstu klærnar",
-            "Dýrið með minnsta heilann",
-            "Dýrið með minnstu fæturna",
-            "Dýrið sem er líklegast til að kvarta yfir matnum",
             "Dýrið sem er líklegast til að ganga með bakpoka",
-            "Dýrið sem er líklegast til að vera gæludýr forseta Íslands", 
+            "Dýrið sem er líklegast til að vera gæludýr forseta Íslands",
+            "Dýrið sem er líklegast til að skrifa bók um líf sitt",
+            "Dýrið sem er líklegast til að heimsækja bókasafn",
+            "Dýrið sem er líklegast til að elda",
+            "Dýrið sem er líklegast til að sofa uppi á háalofti",
+            "Dýrið sem er líklegast til að spila á hljóðfæri",
+            "Dýrið sem er líklegast til að koma í fréttunum",
+            "Dýrið sem er líklegast til að læra að lesa",
+            "Dýrið sem er líklegast til að finnast í heitum potti",
+            "Dýrið sem er líklegast til að hafa það kózý upp í sófa",
+            "Dýrið sem er líklegast til að fara á hestbak",
+            "Dýrið sem er líklegast til að nota gleraugu",
+            "Dýrið sem er líklegast til að fá sér göt í eyrun",
+            "Dýrið sem er líklegast til að panta súrdeigspizzu",
+            "Dýrið sem er líklegast til að fara út í ostagerð",
+            "Dýrið sem er líklegast til að vera í góðu skapi",
+            "Dýrið sem er líklegast til að vera í vondu skapi",
+            "Dýrið sem er líklegast til að vilja verða vinur þinn",
+            "Dýrið sem er líklegast til að kynna nýjan búðing í Hagkaup",
+            "Dýrið sem er líklegast til að keppa í badminton",
+            "Dýrið sem er líklegast til að gerast danskur húsgagnahönnuður",
+            "Dýrið sem er líklegast til að hanna tölvuleiki",
+            "Dýrið sem er líklegast til að hanna nýjar tegundir af pasta",
+            "Dýrið sem er líklegast til að nudda annað dýr",
+            "Dýrið sem er líklegast til að prjóna trefil",
+            "Dýrið sem er líklegast til að flétta á sér hárið",
+            "Dýrið sem er líklegast til að fara í klifurhúsið",
+            "Dýrið sem er líklegast til að eiga ættingja í stjórnsýslunni",
+            "Dýrið sem er líklegast til að fara á ólympíuleikana",
+
+            "Dýrið sem best í að ganga með skartgripi",
+            "Dýrið sem er best að nota skæri",
+            "Dýrið sem er best að dansa",
+            "Dýrið sem er best í að baka brauð",
+            "Dýrið sem er best í að láta þig halda að það sé mánudagur",
+            "Dýrið sem er best í að taka ljósmyndir þannig að það sést ekki í allt ennið á fólki",
+            "Dýrið sem er best í að koma sér í sambönd til að fá netflix aðgang",
+
+            "Dýrið sem er best í að fussa yfir einhverju sem því finnst ekki vera fréttir",
+            "Dýrið sem er best í að hvetja aðra áfram",
+
+
+            "Dýrið sem getur borðað mest á einum degi",
+            "Dýrið sem gæti ekki lifað af án þess að skoða instagram á 5 mínútna fresti",
+            "Dýrið sem gæti verið tölvunarfræðingur",
+            "Dýrið sem kann flesta tóna",
+            "Dýrið sem kann flesta brandarana",
+            "Dýrið sem hefur farið oftast í ísbúð",
+            "Dýrið sem best kann að meta jazz tónlist",
+            "Dýrið sem kann símanúmer allra vina sinna utanað",
+            "Dýrið sem getur talið upp í hæsta töluna",
+            "Dýrið sem kann flest þjóðlög",
+            "Dýrið sem er best í að fljúga flugdreka",
+            "Dýrið sem er mest fyrir poppkorn",
+            "Dýrið sem er mest fyrir að lita með vaxlitum",
+            "Dýrið sem stóð sig best í íþróttum í skóla",
+            "Dýrið sem stóð sig best í hlíðniskóla",
+            "Dýrið sem fékk að fara einum bekk á undan í skóla",
+            "Dýrið sem fór óhefðbunda leið í gegnum skólakerfið",
+
+            "Dýrið sem flest eru hrædd við",
+            "Dýrið sem yrði sett á gríðarstórt veggteppi á barnaspítala",
+            "Dýrið sem var valið vinsælasti nemandinn",
+            "Dýrið sem var forseti nemendafélagsins",
+            "Dýrið sem var kosið líklegast til að ná árangri",
+            "Dýrið sem flest fólk vill ekki sjá í strætó",
+            "Dýrið sem fólk myndi furða sig mest á ef það myndi banka upp á",
+            "Dýrið sem fólk hringir í þegar eitthvað er að rafmagninu",
+            "Dýrið sem fólk hringir í þegar það þarf skattaráðgjöf",
+            "Dýrið sem fólk hringir í þegar það missir af flugi",
+            "Dýrið sem fólki kaus sem næsta atriði í Eurovision",
+            "Dýrið sem fólk vill að hætti að skrifa bókagagnrýni",
+            "Dýrið sem fólk reynir að forðast í fermingum",
+            "Dýrið sem fólk kann að meta að mætti í ferminguna",
+            "Dýrið sem fólk öfundar af hæfileikum í körfubolta",
+            "Dýrið sem var kostið ólíklegast til að ná árangri í fornleifafræði",
+            "Dýrið sem var valið þriðji besti keppandinn í fegurðarsamkeppni",
+
+            "Dýrið sem notar minnstu skóna",
+            "Dýrið sem ferðast um heiminn til að taka þátt í fegurðarsamkeppnum"
+
+        ]
+        const raunSkilyrdi = [
+            "Dýrið sem fer oftast óvart í bílferð",
+            "Dýrið sem klæjar mest",
+            "Dýrið sem þráir að vera bara heima hjá foreldrum sínum",
+            "Dýrið sem vill alls ekki vera heima hjá foreldrum sínum",
+            "Dýrið sem skiptir oftast um lit",
+            "Dýrið sem fann sér stein, og er alltaf hjá honum",
+            "Dýrið sem vill bara horfa upp í skýin allan daginn",
+            "Dýrið sem vill alltaf teygja úr sér",
+            "Dýrið með stærstu tunguna",
+            "Dýrið sem hefur verið vakandi síðan í síðustu viku",
+            "Dýrið sem vill bara fara að sofa núna",
+            "Flottasta dýrið",
+            "Svalasta dýrið",
+            "Grimmasta dýrið",
             "Dýrið sem syndir best",
             "Dýrið sem býr næst miðju jarðar",
             "Sætasta dýrið",
@@ -37,237 +126,352 @@
             "Mest illa lyktandi dýrið",
             "Klístraðasta dýrið",
             "Sleipasta dýrið",
-            "Dýrið sem er líklegast til að skrifa bók um líf sitt",
+            "Ljótasta dýrið",
+            "Dýrið með stærstu tennurnar",
+            "Dýrið með stærstu augun",
+            "Dýrið með minnstu klærnar",
+            "Dýrið með minnsta heilann",
+            "Dýrið með minnstu fæturna",
+            "Hættulegasta dýrið",
             "Dýrið sem er líklegast til að búa í helli",
             "Dýrið sem er líklegast til að vera uppi í tré",
             "Dýrið sem er líklegast til að finnast uppi á fjalli",
             "Dýrið sem er skyldast mönnum",
-            "Dýrið sem getur borðað mest á einum degi",
-            "Skrýtnasta dýrið",
             "Dýrið sem getur sofið mest í einu",
             "Eitraðasta dýrið",
             "Dýrið sem myndi vinna í slag",
-            "Dýrið sem getur gengið með skartgripi",
-            "Dýrið sem yrði sett á gríðarstórt veggteppi á barnaspítala",
-            "Dýrið sem er líklegast til að spila á hljóðfæri",
-            "Dýrið sem er líklegast til að koma í fréttunum",
-            "Dýrið sem er líklegast til að læra að lesa",
-            "Dýrið sem er líklegast til að læra táknmál",
+            "Dýrið sem er líklegast til að kvarta yfir matnum",
+            "Skrýtnasta dýrið",
             "Dýrið sem er líklegast til að fela sig undir sumarbústað",
-            "Dýrið sem er líklegast til að finnast í heitum potti",
-            "Dýrið sem er líklegast til að hafa það kózý upp í sófa",
+            "Dýrið sem er líklegast til að læra táknmál",
             "Dýrið með stærstu eyrun",
             "Dýrið sem er hvað næst yfirborði jarðarinnar",
             "Dýrið sem er líklegast til að sleikja á þér höndina",
-            "Dýrið sem kann flesta tóna",
-            "Dýrið sem kann flesta brandarana",
-            "Dýrið sem er líklegast til að heimsækja bókasafn",
-            "Dýrið sem er líklegast til að þefa af blómum",
             "Feitasta dýrið",
             "Mjóasta dýrið",
-            "Dýrið sem er líklegast til að elda",
             "Dýrið sem finnst hærra uppi í loftinu",
-            "Dýrið sem er líklegast til að vera óvinur í hryllingsmynd",
-            "Dýrið sem er líklegast til að sofa uppi á háalofti",
             "Dýrið með harðasta gogginn",
             "Dýrið sem gæti passað best ofan í pappakassa",
-            "Dýrið sem flest eru hrædd við",
-            "Dýrið sem er líklegast til að fara á hestbak",
             "Loðnasta dýrið",
             "Hægasta dýrið",
             "Hraðasta dýrið",
             "Dýrið með fallegasta nafnið",
             "Flottasta myndin",
-            "Dýrið sem gæti verið tölvunarfræðingur",
+            "Dýrið sem er líklegast til að þefa af blómum",
+            "Dýrið sem er líklegast til að vera óvinur í hryllingsmynd",
             "Dýrið sem gæti slökkt eld",
-            "Dýrið sem er best að nota skæri",
-            "Dýrið sem kann best að meta jazz tónlist",
-            "Dýrið sem er líklegast til að nota gleraugu",
-            "Dýrið sem notar minnstu skóna",
-            "Dýrið sem er líklegast til að fá sér göt í eyrun",
-            "Dýrið sem er best að dansa",
             "Meinlausasta dýrið",
-            "Dýrið sem er líklegast til að panta súrdeigspizzu",
-            "Dýrið sem hefur farið oftast í ísbúð",
-            "Dýrið sem er líklegast til að fara út í ostagerð",
             "Dýrið sem langar mest að vera ofan í holu",
-            "Dýrið sem gæti ekki lifað af án þess að skoða instagram á 5 mínútna fresti",
-            "Dýrið sem kann símanúmer allra vina sinna utanað",
-            "Dýrið sem fékk að fara einum bekk á undan í skóla",
-            "Dýrið sem stóð sig best í hlíðniskóla",
-            "Dýrið sem getur talið upp í hæsta töluna",
             "Dýrið sem er best í að klifra",
-            "Dýrið sem er best í að fljúga flugdreka",
             "Dýrið sem er best í að fela sig",
-            "Dýrið sem er líklegast til að vera í góðu skapi",
-            "Dýrið sem er líklegast til að vera í vondu skapi",
-            "Dýrið sem kann flest þjóðlög",
-            "Dýrið sem er líklegast til að vilja verða vinur þinn",
-            "Dýrið sem er líklegast til að kynna nýjan búðing í Hagkaup",
-            "Dýrið sem er mest fyrir poppkorn",
             "Dýrið sem vill helst vera í sólbaði",
-            "Dýrið sem er líklegast til að keppa í badminton",
-            "Dýrið sem er líklegast til að gerast danskur húsgagnahönnuður",
-            "Dýrið sem er líklegast til að hanna tölvuleiki",
-            "Dýrið sem er líklegast til að nudda annað dýr",
-            "Dýrið sem er líklegast til að prjóna trefil",
-            "Dýrið sem stóð sig best í íþróttum í skóla",
             "Dýrið sem fer til útlanda á hverju ári",
             "Dýrið sem vill helst vera neðanjarðar",
             "Dýrið sem vill helst vera neðansjávar",
-            "Dýrið sem er líklegast til að flétta á sér hárið",
-            "Dýrið sem er líklegast til að fara í klifurhúsið",
-            "Dýrið sem er líklegast til að fara á ólympíuleikana",
             "Dýrið sem er líklegast til að forðast vatn",
-            "Dýrið sem er mest fyrir að lita með vaxlitum",
-            "Dýrið sem er líklegast til að eiga ættingja í stjórnsýslunni",
-            ];
-        const engSkilyrdi = ["The nicest animal", 
-            "The Coolest Animal",
-            "The most cruel animal", 
-            'The animal most likely to be in a circus', 
-            'The animal most likely to be a pet',
-            'The animal most likely to be in a swimming pool', 
-            "The most dangerous animal",
-            "The Animal Most Likely to Be President", 
-            'The animal most likely to eat a mouse', 
-            "The animal most likely to live in Iceland", 
-            'The animal most likely to be a mascot for a pool garden', 
-            'The animal most likely to be a mascot for a clock company ', 
-            "The ugliest animal", 
-            "The Beast With the Biggest Teeth", 
-            'The animal most likely to talk a lot on the phone',
-            "The Beast with the Biggest Eyes", 
-            "The Beast with the Smallest Claws", 
-            "The Beast with the Smallest Brain", 
-            "The Beast with the Smallest Legs", 
-            'The animal most likely to complain about the food',
-            'The animal most likely to walk with a backpack', 
-            "The animal most likely to be the pet of the President of Iceland", 
-            "The best-swimming animal", 
-            'The animal that lives closest to the centre of the earth', 
-            "The sweetest animal", 
-            "The Crucible Beast", 
-            "Most smelly animal", 
-            "The stickiest animal", 
-            "The slickest animal", 
-            "The Animal Most Likely to Write a Book About His Life", 
-            'The animal most likely to live in a cave ', 
-            'The animal most likely to be up in the tree ', 
-            'The animal most likely to be found on top of a mountain ', 
-            'The animal related to man ', 
-            'The animal that can eat the most in a day ', 
-            "The Most Weird Animal", 
-            'The animal that can sleep most at once', 
-            "The most toxic animal", 
-            "The animal that would win a fight", 
-            "The Beast Who Can Walk With Jewels",
-            "The animal that would be put on a massive tapestry in a children's hospital",
-            'The animal most likely to play a musical instrument', 
-            "The animal most likely to come in the news", 
-            'The animal most likely to learn to read', 
-            'The animal most likely to learn sign language',
-            'The animal most likely to hide under a cabin',
-            'The animal most likely to be found in a hot tub',
-            'The animal most likely to have it cozy on the sofa',
-            "The Beast with the Biggest Ears",
-            'The animal that is nearest to the surface of the earth',
-            "The animal most likely to lick your hand",
-            "The Beast Who Knows the Most Tones", 
-            "The Beast Who Knows Most of the Jokes", 
-            'The animal most likely to visit a library ', 
-            'The animal most likely to smell flowers', 
-            "The Fattest Animal", 
-            "The Tallest Animal", 
-            'The animal most likely to cook', 
-            'The animal found higher up in the air', 
-            'The Beast Most Likely to Be Enemy in a Horror', 
-            'The animal most likely to sleep in the attic ', 
-            "The Beast with the Hardest Beak", 
-            'The animal that could fit best into a cardboard box', 
-            "The most feared animal",
-            'The animal most likely to ride a horse', 
-            "The most furry animal", 
-            "The slowest animal", 
-            "The Fastest Animal", 
-            "The Beast with the Most Beautiful Name", 
-            "The Coolest Picture", 
-            "The Animal Who Could Be a Computer", 
-            'The animal that could extinguish a fire ', 
-            'The best animal to use scissors', 
-            "The Animal Who Can Best Appreciate Jazz Music", 
-            'The animal most likely to wear glasses', 
-            'The animal that wears the smallest shoes', 
-            'The animal most likely to have holes in its ears', 
-            "The best animal to dance", 
-            "The Most Harmless Animal", 
-            'The animal most likely to order a sourdough pizza', 
-            'The animal that has been to an ice cream parlour most of the time', 
-            'The animal most likely to go into cheese making', 
-            "The animal that wants to be in the hole most", 
-            "The animal that couldn't survive without checking every 5 minutes", 
-            'The animal that knows the phone numbers of all his friends on the outside ', 
-            "The Animal Who Got to Go One Class Before School", 
-            "The best performing animal in hill school", 
-            'The animal that can count to the highest number', 
-            "The best animal in climbing",   
-            'The best animal to fly a kite', 
-            "The best animal to hide",   
-            'The animal most likely to be in a good mood ', 
-            'The animal most likely to be in a bad mood', 
-            "The Beast Who Knows Most Folk Laws", 
-            "The animal most likely to want to be your friend",   
-            "The animal most likely to introduce a new pudding to Hagkaup",
-            "The most important animal for popcorn",   
-            'The animal that prefers to be in the sun', 
-            "The animal most likely to compete in badminton",   
-            'The animal most likely to be a Danish furniture designer ', 
-            'The animal most likely to design video games', 
-            'The animal most likely to rub another animal ', 
-            'The animal most likely to knit a scarf', 
-            "The best performing animal in sports in school",   
-            'The animal that goes abroad every year', 
-            "The animal that prefers to be underground", 
-            "The animal that prefers to be underwater", 
-            'The animal most likely to braid its hair', 
-            'The animal most likely to go to the climbing house', 
-            'The animal most likely to go to the Olympics', 
-            'The animal most likely to avoid water',
-            'The most important animal for dyeing with waxes', 
-            'The animal most likely to have relatives in the administration'
-            ]
+            "Dýrið sem er best í að lækna",
+            "Dýrið sem er best í að bora í nefið",
+        ]
+        // const engSkilyrdi = ["The nicest animal",
+        //     "The Coolest Animal",
+        //     "The most cruel animal",
+        //     'The animal most likely to be in a circus',
+        //     'The animal most likely to be a pet',
+        //     'The animal most likely to be in a swimming pool',
+        //     "The most dangerous animal",
+        //     "The Animal Most Likely to Be President",
+        //     'The animal most likely to eat a mouse',
+        //     "The animal most likely to live in Iceland",
+        //     'The animal most likely to be a mascot for a pool garden',
+        //     'The animal most likely to be a mascot for a clock company ',
+        //     "The ugliest animal",
+        //     "The Beast With the Biggest Teeth",
+        //     'The animal most likely to talk a lot on the phone',
+        //     "The Beast with the Biggest Eyes",
+        //     "The Beast with the Smallest Claws",
+        //     "The Beast with the Smallest Brain",
+        //     "The Beast with the Smallest Legs",
+        //     'The animal most likely to complain about the food',
+        //     'The animal most likely to walk with a backpack',
+        //     "The animal most likely to be the pet of the President of Iceland",
+        //     "The best-swimming animal",
+        //     'The animal that lives closest to the centre of the earth',
+        //     "The sweetest animal",
+        //     "The Crucible Beast",
+        //     "Most smelly animal",
+        //     "The stickiest animal",
+        //     "The slickest animal",
+        //     "The Animal Most Likely to Write a Book About His Life",
+        //     'The animal most likely to live in a cave ',
+        //     'The animal most likely to be up in the tree ',
+        //     'The animal most likely to be found on top of a mountain ',
+        //     'The animal related to man ',
+        //     'The animal that can eat the most in a day ',
+        //     "The Most Weird Animal",
+        //     'The animal that can sleep most at once',
+        //     "The most toxic animal",
+        //     "The animal that would win a fight",
+        //     "The Beast Who Can Walk With Jewels",
+        //     "The animal that would be put on a massive tapestry in a children's hospital",
+        //     'The animal most likely to play a musical instrument',
+        //     "The animal most likely to come in the news",
+        //     'The animal most likely to learn to read',
+        //     'The animal most likely to learn sign language',
+        //     'The animal most likely to hide under a cabin',
+        //     'The animal most likely to be found in a hot tub',
+        //     'The animal most likely to have it cozy on the sofa',
+        //     "The Beast with the Biggest Ears",
+        //     'The animal that is nearest to the surface of the earth',
+        //     "The animal most likely to lick your hand",
+        //     "The Beast Who Knows the Most Tones",
+        //     "The Beast Who Knows Most of the Jokes",
+        //     'The animal most likely to visit a library ',
+        //     'The animal most likely to smell flowers',
+        //     "The Fattest Animal",
+        //     "The Tallest Animal",
+        //     'The animal most likely to cook',
+        //     'The animal found higher up in the air',
+        //     'The Beast Most Likely to Be Enemy in a Horror',
+        //     'The animal most likely to sleep in the attic ',
+        //     "The Beast with the Hardest Beak",
+        //     'The animal that could fit best into a cardboard box',
+        //     "The most feared animal",
+        //     'The animal most likely to ride a horse',
+        //     "The most furry animal",
+        //     "The slowest animal",
+        //     "The Fastest Animal",
+        //     "The Beast with the Most Beautiful Name",
+        //     "The Coolest Picture",
+        //     "The Animal Who Could Be a Computer",
+        //     'The animal that could extinguish a fire ',
+        //     'The best animal to use scissors',
+        //     "The Animal Who Can Best Appreciate Jazz Music",
+        //     'The animal most likely to wear glasses',
+        //     'The animal that wears the smallest shoes',
+        //     'The animal most likely to have holes in its ears',
+        //     "The best animal to dance",
+        //     "The Most Harmless Animal",
+        //     'The animal most likely to order a sourdough pizza',
+        //     'The animal that has been to an ice cream parlour most of the time',
+        //     'The animal most likely to go into cheese making',
+        //     "The animal that wants to be in the hole most",
+        //     "The animal that couldn't survive without checking every 5 minutes",
+        //     'The animal that knows the phone numbers of all his friends on the outside ',
+        //     "The Animal Who Got to Go One Class Before School",
+        //     "The best performing animal in hill school",
+        //     'The animal that can count to the highest number',
+        //     "The best animal in climbing",
+        //     'The best animal to fly a kite',
+        //     "The best animal to hide",
+        //     'The animal most likely to be in a good mood ',
+        //     'The animal most likely to be in a bad mood',
+        //     "The Beast Who Knows Most Folk Laws",
+        //     "The animal most likely to want to be your friend",
+        //     "The animal most likely to introduce a new pudding to Hagkaup",
+        //     "The most important animal for popcorn",
+        //     'The animal that prefers to be in the sun',
+        //     "The animal most likely to compete in badminton",
+        //     'The animal most likely to be a Danish furniture designer ',
+        //     'The animal most likely to design video games',
+        //     'The animal most likely to rub another animal ',
+        //     'The animal most likely to knit a scarf',
+        //     "The best performing animal in sports in school",
+        //     'The animal that goes abroad every year',
+        //     "The animal that prefers to be underground",
+        //     "The animal that prefers to be underwater",
+        //     'The animal most likely to braid its hair',
+        //     'The animal most likely to go to the climbing house',
+        //     'The animal most likely to go to the Olympics',
+        //     'The animal most likely to avoid water',
+        //     'The most important animal for dyeing with waxes',
+        //     'The animal most likely to have relatives in the administration'
+        // ]
 
-            document.addEventListener("DOMContentLoaded", () => {
-                document.querySelector("#skilyrði").addEventListener("click", () => {
-                    const index = parseInt(Math.random() * skilyrdi.length);
-                    document.querySelector("#titill").innerHTML = skilyrdi[index];
-                });
-            });
-            document.addEventListener("DOMContentLoaded", () => {
-                document.querySelector("#engSkilyrði").addEventListener("click", () => {
-                    const index = parseInt(Math.random() * engSkilyrdi.length);
-                    document.querySelector('#titill').innerHTML = skilyrdi[index];
-                    document.querySelector("#engTitill").innerHTML = engSkilyrdi[index];
-                });
-            });
-        </script>
-    </head>
-    <body>
+        // document.addEventListener("DOMContentLoaded", () => {
+        //     document.querySelector("#skilyrði").addEventListener("click", () => {
+        //         console.log(document.getElementById("myCheck").checked)
+        //         const index = parseInt(Math.random() * skilyrdi.length);
+        //         document.querySelector("#titill").innerHTML = skilyrdi[index];
+        //     });
+        // });
+        function getNew() {
+            const usingFurðu = document.getElementById("s1").checked
+            const usingRaun = document.getElementById("s2").checked
+            if (usingFurðu && usingRaun) {
+                const arr = Math.random(0, 1) > 0.5 ? furduSkilyrdi : raunSkilyrdi
+                const index = usingFurðu ? parseInt(Math.random() * furduSkilyrdi.length) : parseInt(Math.random() * raunSkilyrdi.length)
+                document.querySelector("#titill").innerHTML = arr[index];
+            }
+            else if (usingFurðu || usingRaun) {
+                const arr = usingFurðu ? furduSkilyrdi : raunSkilyrdi
+                const index = usingFurðu ? parseInt(Math.random() * furduSkilyrdi.length) : parseInt(Math.random() * raunSkilyrdi.length)
+                document.querySelector("#titill").innerHTML = arr[index];
+            }
+            else {
+                document.querySelector("#titill").innerHTML = "Hvaða dýr er með minnstu puttana?";
+            }
+        }
+        // document.addEventListener("DOMContentLoaded", () => {
+        //     document.querySelector("#engSkilyrði").addEventListener("click", () => {
+        //         const index = parseInt(Math.random() * engSkilyrdi.length);
+        //         document.querySelector('#titill').innerHTML = skilyrdi[index];
+        //         document.querySelector("#engTitill").innerHTML = engSkilyrdi[index];
+        //     });
+        // });
+    </script>
+</head>
 
-        <button id="skilyrði" style="
+<body>
+    <h2>Til eru margar leiðir til að spila spilið</h2>
+    <p>Sú einfaldasta er hér </p>
+    <blockquote class="instagram-media"
+        data-instgrm-captioned
+        data-instgrm-permalink="https://www.instagram.com/reel/C8fsBE2tBZm/?utm_source=ig_embed&amp;utm_campaign=loading"
+        data-instgrm-version="14"
+        style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+        <div style="padding:16px;"> <a
+                href="https://www.instagram.com/reel/C8fsBE2tBZm/?utm_source=ig_embed&amp;utm_campaign=loading"
+                style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;"
+                target="_blank">
+                <div style=" display: flex; flex-direction: row; align-items: center;">
+                    <div
+                        style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;">
+                    </div>
+                    <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;">
+                        <div
+                            style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;">
+                        </div>
+                        <div
+                            style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;">
+                        </div>
+                    </div>
+                </div>
+                <div style="padding: 19% 0;"></div>
+                <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px"
+                        height="50px"
+                        viewBox="0 0 60 60"
+                        version="1.1"
+                        xmlns="https://www.w3.org/2000/svg"
+                        xmlns:xlink="https://www.w3.org/1999/xlink">
+                        <g stroke="none"
+                            stroke-width="1"
+                            fill="none"
+                            fill-rule="evenodd">
+                            <g transform="translate(-511.000000, -20.000000)"
+                                fill="#000000">
+                                <g>
+                                    <path
+                                        d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631">
+                                    </path>
+                                </g>
+                            </g>
+                        </g>
+                    </svg></div>
+                <div style="padding-top: 8px;">
+                    <div
+                        style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">
+                        View this post on Instagram</div>
+                </div>
+                <div style="padding: 12.5% 0;"></div>
+                <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;">
+                    <div>
+                        <div
+                            style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);">
+                        </div>
+                        <div
+                            style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;">
+                        </div>
+                        <div
+                            style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);">
+                        </div>
+                    </div>
+                    <div style="margin-left: 8px;">
+                        <div
+                            style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;">
+                        </div>
+                        <div
+                            style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)">
+                        </div>
+                    </div>
+                    <div style="margin-left: auto;">
+                        <div
+                            style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);">
+                        </div>
+                        <div
+                            style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);">
+                        </div>
+                        <div
+                            style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);">
+                        </div>
+                    </div>
+                </div>
+                <div
+                    style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;">
+                    <div
+                        style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;">
+                    </div>
+                    <div
+                        style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;">
+                    </div>
+                </div>
+            </a>
+            <p
+                style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">
+                <a href="https://www.instagram.com/reel/C8fsBE2tBZm/?utm_source=ig_embed&amp;utm_campaign=loading"
+                    style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;"
+                    target="_blank">A post shared by Náttúruval (@natturuval)</a>
+            </p>
+        </div>
+    </blockquote>
+    <p>Þar má líka sjá fleiri leiðir til að spila en hér fyrir má finna útfærslu fyrir partýútgáfuna af spilinu.</p>
+    <h2>Partýdýra reglurnar</h2>
+    <p>Til þess að spila partý útgáfuna þá draga allir spilarar eitt spil til sín, það fer eftir hópnum hvort megi kíkja
+        fyrst og undirbúa sig. Þá er ýtt á takkann hér að neðan og fólk reynir eftir bestu getu að sannfæra hópinn um að
+        sitt dýr sé vissulega dýrið sem þetta skilyrði á við um. Hægt er að hafa fleiri spil á hendi og velja úr en það
+        á það til að hægja á leiknum.</p>
+    <p> Það er hægt að skiptast á með tvennum hætti:
+    <ul>
+        <li>Hver spilari fær að kynna dýrið sitt en hinir spilararnir fá að grípa inn í með spurningum og aðfinnslum,
+            svo lengi sem þær séu skemmtilegar.</li>
+        <li>Hver spilari fær ótruflaðan kynningartíma, eftir stutta hláturspásu þá gerir næsti spilari.</li>
+    </ul>
+    </p>
+    <p>Það er hægt að útkljá sigurvegara á tvo vegu:
+    <ul>
+        <li>Með því að rökræða og komast að niðurstöðu saman.</li>
+        <li>Með því að telja upp á þrjá og benda á þann sem að þér þykir bestur.</li>
+    </ul>
+    </p>
+    <h3>Veldu hvernig skilyrði má bjóða þér að draga úr</h3>
+    <div>
+
+        <input type="checkbox"
+            id="s1"
+            value="furdu">
+        <label for="furdu">Furðuleg og fyndin skilyrði</label><br>
+        <input type="checkbox"
+            id="s2"
+            value="raun">
+        <label for="raun">Bókstafleg og raunhæf skilyrði</label>
+    </div>
+    <button id="skilyrði"
+        onclick=getNew()
+        style="
                 background-color: #4CAF50;
                 border: none;
                 color: white;
-                margin-top: 3em;
+                margin-top: 1em;
                 margin-left: 1em;
                 padding: 15px 32px;
                 text-align: center;
                 text-decoration: none;
                 display: inline-block;
-                font-size: 24px;"
-              >Nýtt skilyrði!</button>
-        <h1 id="titill" style="font-size: 3em;">Ýttu á takkann</h1>
-        <button id="engSkilyrði" style="
+                font-size: 24px;">
+        Nýtt skilyrði!
+    </button>
+    <h1 id="titill"
+        style="font-size: 3em;">Hér birtist textinn sem ræður umferðinni </h1>
+    <!-- <button id="engSkilyrði" style="
         background-color: #4CAF50;
         border: none;
         color: white;
@@ -280,6 +484,7 @@
         font-size: 24px;"
       >New condition</button>
 <h1 id="engTitill" style="font-size: 3em;">Press the button</h1>
-    
-    </body>
+     -->
+</body>
+
 </html>
